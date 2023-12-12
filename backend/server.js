@@ -23,6 +23,10 @@ app.use(cors(
   //   credentials:true
   // }
 ));
+app.use(express.json());
+app.use(morgan("dev"));
+
+
 
 setTimeout(() => {
   storeCSVDataInMongoDB();
@@ -33,8 +37,7 @@ setInterval(() => {
 }, 30000);
 
 
-app.use(express.json());
-app.use(morgan("dev"));
+
 
 app.use("/api/v1/data", dataRoutes);
 
