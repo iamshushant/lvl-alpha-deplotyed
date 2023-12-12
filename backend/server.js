@@ -18,13 +18,13 @@ connectDB();
 console.log("Here");
 
 
-// app.use(cors(
-//   {
-//     origin:["https://lvl-alpha-deploy-frontend.vercel.app"],
-//     methods:["POST","GET"],
-//     credentials:true
-//   }
-// ));
+app.use(cors(
+  {
+    origin:["https://lvl-alpha-deploy-frontend.vercel.app"],
+    methods:["POST","GET"],
+    credentials:true
+  }
+));
 app.use(express.json());
 app.use(morgan("dev"));
 app.use("/api/v1/data", dataRoutes);
