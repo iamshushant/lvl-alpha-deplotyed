@@ -7,6 +7,7 @@ import dotenv from "dotenv";
 import storeCSVDataInMongoDB from "./helper/store.js";
 import dataRoutes from "./routes/dataRoutes.js";
 import { checkController } from "./controller/chkcontroller.js";
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 
@@ -34,6 +35,10 @@ app.use(morgan("dev"));
 
 app.use("/api/v1/data", dataRoutes);
 
-app.listen(8080, () => {
+app.get("/",(req,res)=>{
+  res.status(200).json("Hello");
+})
+
+app.listen(PORT, () => {
   console.log(`server running at port 8080`.bgBlue.white);
 });
