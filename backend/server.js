@@ -41,9 +41,9 @@ setInterval(() => {
 
 app.use("/api/v1/data", dataRoutes);
 
-app.get("/",(req,res)=>{
-  res.status(200).json("Hello");
-})
+// app.get("/",(req,res)=>{
+//   res.status(200).json("Hello");
+// })
 
 app.listen(PORT, () => {
   console.log(`server running at port 8080`.bgBlue.white);
