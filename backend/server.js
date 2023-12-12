@@ -17,11 +17,11 @@ connectDB();
 
 
 app.use(cors(
-  // {
-  //   origin:["https://lvl-alpha-deploy-frontend.vercel.app/"],
-  //   methods:["POST","GET"],
-  //   credentials:true
-  // }
+  {
+    origin:["https://lvl-alpha-deploy-frontend.vercel.app"],
+    methods:["POST","GET"],
+    credentials:true
+  }
 ));
 app.use(express.json());
 app.use(morgan("dev"));
