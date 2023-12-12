@@ -16,30 +16,30 @@ dotenv.config();
 connectDB();
 
 
-// app.use(cors(
-//   // {
-//   //   origin:["https://lvl-alpha-deploy-frontend.vercel.app/"],
-//   //   methods:["POST","GET"],
-//   //   credentials:true
-//   // }
-// ));
-// app.use(express.json());
-// app.use(morgan("dev"));
+app.use(cors(
+  {
+    origin:["https://lvl-alpha-deploy-frontend.vercel.app/"],
+    methods:["POST","GET"],
+    credentials:true
+  }
+));
+app.use(express.json());
+app.use(morgan("dev"));
 
 
 
-// setTimeout(() => {
-//   storeCSVDataInMongoDB();
-// }, 0);
+setTimeout(() => {
+  storeCSVDataInMongoDB();
+}, 0);
 
-// setInterval(() => {
-//   checkController();
-// }, 30000);
-
-
+setInterval(() => {
+  checkController();
+}, 30000);
 
 
-// app.use("/api/v1/data", dataRoutes);
+
+
+app.use("/api/v1/data", dataRoutes);
 
 app.get("/",(req,res)=>{
   res.status(200).json("Hello");
