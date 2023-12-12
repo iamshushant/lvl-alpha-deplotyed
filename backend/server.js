@@ -18,13 +18,13 @@ connectDB();
 console.log("Here");
 
 
-app.use(cors(
-  {
-    origin:["https://lvl-alpha-deploy-frontend.vercel.app"],
-    methods:["POST","GET"],
-    credentials:true
-  }
-));
+// app.use(cors(
+//   {
+//     origin:["https://lvl-alpha-deploy-frontend.vercel.app"],
+//     methods:["POST","GET"],
+//     credentials:true
+//   }
+// ));
 app.use(express.json());
 app.use(morgan("dev"));
 app.use("/api/v1/data", dataRoutes);
@@ -43,9 +43,9 @@ setInterval(() => {
 
 
 
-// app.get("/",(req,res)=>{
-//   res.status(200).json("Hello");
-// })
+app.get("/",(req,res)=>{
+  res.status(200).json("Hello");
+})
 
 app.listen(PORT, () => {
   console.log(`server running at port 8080`.bgBlue.white);
