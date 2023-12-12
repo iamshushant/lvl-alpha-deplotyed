@@ -15,6 +15,8 @@ dotenv.config();
 
 connectDB();
 
+console.log("Here");
+
 
 app.use(cors(
   {
