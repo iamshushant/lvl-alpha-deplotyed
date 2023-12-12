@@ -15,13 +15,6 @@ dotenv.config();
 
 connectDB();
 
-setTimeout(() => {
-  storeCSVDataInMongoDB();
-}, 0);
-
-setInterval(() => {
-  checkController();
-}, 30000);
 
 app.use(cors(
   // {
@@ -30,6 +23,16 @@ app.use(cors(
   //   credentials:true
   // }
 ));
+
+setTimeout(() => {
+  storeCSVDataInMongoDB();
+}, 0);
+
+setInterval(() => {
+  checkController();
+}, 30000);
+
+
 app.use(express.json());
 app.use(morgan("dev"));
 
