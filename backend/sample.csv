@@ -1,0 +1,4 @@
+device_id,temperature,spo2,blood_pressure,health_score,weakness
+1,98.6,98,120/80,85,none
+2,97.8,99,122/78,92,fatigue
+3,98.2,97,118/82,88,headache
