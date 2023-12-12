@@ -10,7 +10,7 @@ function App() {
   const getHealthData = async () => {
     try {
       const { data } = await axios.get(
-        "https://lvl-alpha-deploy-iamshushants-projects.vercel.app/api/v1/data/healthdata" 
+        "https://lvl-alpha-deploy.vercel.app/api/v1/data/healthdata" 
       );
       sethealthData(data?.info);
       console.log(data);
