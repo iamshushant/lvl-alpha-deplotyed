@@ -5,7 +5,7 @@ import path from "path";
 
 const storeCSVDataInMongoDB = () => {
   const results = [];
-  fs.createReadStream("../sample.csv")
+  fs.createReadStream("sample.csv")
     .pipe(csv())
     .on("data", (data) => results.push(data))
     .on("end", () => {
